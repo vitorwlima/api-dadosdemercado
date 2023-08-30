@@ -1,0 +1,19 @@
+{
+  "name": "api-dadosdemercado",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [
+    "mercado",
+    "api",
+    "b3",
+    "cvm"
+  ],
+  "repository": "https://github.com/vitorwlima/api-dadosdemercado",
+  "author": "Vitor Lima <vitorwlima>",
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.1.0",
+    "eslint": "^8.48.0",
+    "typescript": "^5.2.2"
+  }
+}
