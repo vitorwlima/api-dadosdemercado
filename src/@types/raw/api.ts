@@ -1,12 +1,12 @@
-import { Company, GetCompanyArgs } from './company'
+import { Company } from '../data/company'
 import { FetchMarketResponse } from './fetchMarket'
+import { GetCompanyArgs } from './getCompany'
 
-export declare interface API {
+export interface API {
   companies: {
     getCompany: (data: GetCompanyArgs) => Promise<FetchMarketResponse<Company>>
   }
 }
-
-export declare type APIArgs = {
+export type APIArgs = {
   token: string
 }

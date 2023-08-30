@@ -1,11 +1,11 @@
 {
   "name": "api-dadosdemercado",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "main": "dist/main.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/main.d.ts",
   "scripts": {
-    "build": "tsup src"
+    "build": "tsc -p ."
   },
   "keywords": [
     "mercado",
@@ -18,7 +18,6 @@
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.1.0",
     "eslint": "^8.48.0",
-    "tsup": "^7.2.0",
     "typescript": "^5.2.2"
   }
 }

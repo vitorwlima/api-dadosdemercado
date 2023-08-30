@@ -1,8 +1,8 @@
-export declare type FetchMarketArgs = {
+export type FetchMarketArgs = {
   url: string
 }
 
-export declare type FetchMarketResponse<T> =
+export type FetchMarketResponse<T> =
   | {
       ok: false
       error: unknown

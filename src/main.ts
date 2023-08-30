@@ -1,8 +1,7 @@
 import { getCompany } from 'src/lib/company/getCompany'
-import { FetchMarketArgs, FetchMarketResponse } from 'src/types/fetchMarket'
-import { API, APIArgs } from 'src/types/main'
-
-import { GetCompanyArgs } from './types/company'
+import { API, APIArgs } from './@types/raw/api'
+import { FetchMarketArgs, FetchMarketResponse } from './@types/raw/fetchMarket'
+import { GetCompanyArgs } from './@types/raw/getCompany'
 
 class APIDadosDeMercado implements API {
   private readonly fetchMarket: <T>(
