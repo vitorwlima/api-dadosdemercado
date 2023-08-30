@@ -1,6 +1,6 @@
-import { Company } from 'src/@types/data/company'
-import { GetCompanyArgs } from 'src/@types/raw/getCompany'
-import { WithFetch } from 'src/@types/utils/withFetch'
+import { Company } from '../../@types/data/company'
+import { GetCompanyArgs } from '../../@types/raw/getCompany'
+import { WithFetch } from '../../@types/utils/withFetch'
 
 export const getCompany = async ({
   fetchMarket,
