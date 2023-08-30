@@ -9,9 +9,6 @@ export const getCompany = async ({
   fetchMarket,
   ticker,
 }: GetClosure<GetCompanyArgs>) => {
-  return async () => {
-    console.log('to aqui')
-    const res = await fetchMarket<Company>({ url: `companies/${ticker}` })
-    return res
-  }
+  const res = await fetchMarket<Company>({ url: `companies/${ticker}` })
+  return res
 }
