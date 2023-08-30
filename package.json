@@ -1,8 +1,9 @@
 {
   "name": "api-dadosdemercado",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "dist/main.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup src"
   },

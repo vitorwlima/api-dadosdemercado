@@ -1,14 +1,10 @@
-import { Company } from 'src/types/company'
-import { GetClosure } from 'src/types/getClosure'
-
-export type GetCompanyArgs = {
-  ticker: string
-}
+import { Company, GetCompanyArgs } from 'src/types/company'
+import { WithFetch } from 'src/types/withFetch'
 
 export const getCompany = async ({
   fetchMarket,
   ticker,
-}: GetClosure<GetCompanyArgs>) => {
+}: WithFetch<GetCompanyArgs>) => {
   const res = await fetchMarket<Company>({ url: `companies/${ticker}` })
   return res
 }

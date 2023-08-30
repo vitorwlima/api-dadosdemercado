@@ -1,11 +1,10 @@
-import { GetCompanyArgs, getCompany } from 'src/lib/company/getCompany'
+import { getCompany } from 'src/lib/company/getCompany'
 import { FetchMarketArgs, FetchMarketResponse } from 'src/types/fetchMarket'
+import { API, APIArgs } from 'src/types/main'
 
-type APIArgs = {
-  token: string
-}
+import { GetCompanyArgs } from './types/company'
 
-class APIDadosDeMercado {
+class APIDadosDeMercado implements API {
   private readonly fetchMarket: <T>(
     data: FetchMarketArgs,
   ) => Promise<FetchMarketResponse<T>>
@@ -42,7 +41,7 @@ class APIDadosDeMercado {
     }
   }
 
-  public companies = {
+  public readonly companies = {
     getCompany: async (data: GetCompanyArgs) =>
       getCompany({ fetchMarket: this.fetchMarket, ...data }),
   }

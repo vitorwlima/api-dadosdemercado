@@ -1,4 +1,4 @@
-export type Company = {
+export declare type Company = {
   name: string
   trade_name: string
   cvm_code: number
@@ -16,4 +16,8 @@ export type Company = {
   b3_subsector: string
   b3_segment: string
   about: string
+}
+
+export declare type GetCompanyArgs = {
+  ticker: string
 }
