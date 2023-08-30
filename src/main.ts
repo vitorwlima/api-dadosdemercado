@@ -6,13 +6,11 @@ type APIArgs = {
 }
 
 class APIDadosDeMercado {
-  private readonly token: string
   private readonly fetchMarket: <T>(
     data: FetchMarketArgs,
   ) => Promise<FetchMarketResponse<T>>
 
-  constructor(data: APIArgs) {
-    this.token = data.token
+  constructor(APIData: APIArgs) {
     this.fetchMarket = async function <T>({
       url,
     }: FetchMarketArgs): Promise<FetchMarketResponse<T>> {
@@ -21,7 +19,7 @@ class APIDadosDeMercado {
           `https://api.dadosdemercado.com.br/v1/${url}`,
           {
             headers: {
-              Authorization: `Bearer ${this.token}}`,
+              Authorization: `Bearer ${APIData.token}}`,
               Accept: 'application/json',
             },
             method: 'GET',
